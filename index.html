@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Laura Best — Portfolio</title>
+<meta name="description" content="Portfolio of Your Name — developer and builder." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <a href="#hero" class="nav__logo">Laura.</a>
+    <nav class="nav__links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section id="hero" class="hero">
+      <p class="eyebrow">01 · HELLO</p>
+      <h1 class="hero__title">Laura Best</h1>
+      <p class="hero__tagline">I build things, break things, and occasionally fix things that weren't broken in the first place.</p>
+      <div class="hero__cta">
+        <a href="mailto:laura.best@ucalgary.ca" class="btn btn--solid">Contact Me</a>
+        <a href="C:\Users\laura\Downloads\Resume - Laura Best.pdf" class="btn btn--ghost">View Resume</a>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section reveal">
+      <p class="eyebrow">02 · ABOUT</p>
+      <h2 class="section__title">About</h2>
+      <div class="about__grid">
+        <p class="about__bio">
+        Motivated Electrical Engineering student specializing in mechatronics, PCB design, 
+        and embedded systems, seeking opportunities in tech where I can contribute to hardware/software
+        development and real world engineering solutions. Authorized to work in both Canada and the United States.
+        </p>
+        <div class="about__stats">
+          <div class="stat">
+            <span class="stat__num">2+</span>
+            <span class="stat__label">Years Coding</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">12</span>
+            <span class="stat__label">Projects Shipped</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">4</span>
+            <span class="stat__label">Internships</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS (marquee) ============ -->
+    <section id="skills" class="section reveal">
+      <p class="eyebrow">03 · SKILLS</p>
+      <h2 class="section__title">Skills</h2>
+
+      <div class="marquee">
+        <div class="marquee__track">
+          <span>JavaScript</span><span>TypeScript</span><span>HTML5</span><span>CSS3</span><span>Python</span><span>SQL</span>
+          <span>JavaScript</span><span>TypeScript</span><span>HTML5</span><span>CSS3</span><span>Python</span><span>SQL</span>
+        </div>
+      </div>
+      <div class="marquee marquee--reverse">
+        <div class="marquee__track">
+          <span>React</span><span>C/C++</span><span>CAD</span><span>MATLAB</span><span>PCB Design</span><span>Django</span>
+          <span>React</span><span>C/C++</span><span>CAD</span><span>MATLAB</span><span>PCB Design</span><span>Django</span>
+        </div>
+      </div>
+      <div class="marquee">
+        <div class="marquee__track">
+          <span>Git</span><span>Altium</span><span>AWS</span><span>Node.js</span><span>Figma</span><span>Linux</span>
+          <span>Git</span><span>Altium</span><span>AWS</span><span>Node.js</span><span>Figma</span><span>Linux</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="section reveal">
+      <p class="eyebrow">04 · EXPERIENCE</p>
+      <h2 class="section__title">Experience</h2>
+
+      <div class="timeline">
+        <article class="timeline__item">
+          <div class="timeline__head">
+            <h3><a href="#" target="_blank" rel="noopener">Zeus Electric Motorsport Team</a></h3>
+            <span class="timeline__date">Jun 2025 — Present</span>
+          </div>
+          <p class="timeline__role">Telemetry & Cooling Sub Team</p>
+          <ul class="timeline__points">
+            <li>Developed and maintained technical documentation for multiple PCBs, including schematics, revision tracking, and manufacturing handoff packages.</li>
+            <li>Designed and reviewed telemetry and cooling system PCB components using Altium Designer to support reliable data acquisition and system monitoring.</li>
+            <li>Contributed to cooling system mechanical and electrical component design, supporting thermal management and subsystem integration.</li>
+            <li>Collaborated with electrical team members to align sensor data, CAN signals, and board level designs with telemetry requirements.</li>
+          </ul>
+          <div class="tags">
+            <span>Altium</span><span>SOLIDWORKS</span><span>Collaboration</span>
+          </div>
+        </article>
+
+        <article class="timeline__item">
+          <div class="timeline__head">
+            <h3><a href="#" target="_blank" rel="noopener">Previous Company</a></h3>
+            <span class="timeline__date">Jan 2024 — May 2025</span>
+          </div>
+          <p class="timeline__role">Frontend Developer Intern</p>
+          <ul class="timeline__points">
+            <li>Another accomplishment, written as an action + result.</li>
+            <li>Another accomplishment, written as an action + result.</li>
+          </ul>
+          <div class="tags">
+            <span>JavaScript</span><span>CSS</span><span>Figma</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ WORK / PROJECTS ============ -->
+    <section id="work" class="section reveal">
+      <p class="eyebrow">05 · WORK</p>
+      <h2 class="section__title">Work</h2>
+
+      <div class="projects-carousel">
+  <div class="projects-track" id="projectsTrack">
+    <article class="project">
+      <span class="project__num">001</span>
+      <h3 class="project__title">Project One</h3>
+      <p class="project__desc">One or two sentences on what it does and the interesting problem it solves.</p>
+      <div class="tags">
+        <span>TypeScript</span><span>Next.js</span><span>Prisma</span>
+      </div>
+      <div class="project__links">
+        <a href="#" target="_blank" rel="noopener">LIVE</a>
+        <a href="#" target="_blank" rel="noopener">GITHUB</a>
+      </div>
+    </article>
+
+    <article class="project">
+      <span class="project__num">002</span>
+      <h3 class="project__title">Project Two</h3>
+      <p class="project__desc">One or two sentences on what it does and the interesting problem it solves.</p>
+      <div class="tags">
+        <span>Python</span><span>LangChain</span><span>ChromaDB</span>
+      </div>
+      <div class="project__links">
+        <a href="#" target="_blank" rel="noopener">GITHUB</a>
+      </div>
+    </article>
+
+    <article class="project">
+      <span class="project__num">003</span>
+      <h3 class="project__title">Project Three</h3>
+      <p class="project__desc">One or two sentences on what it does and the interesting problem it solves.</p>
+      <div class="tags">
+        <span>React</span><span>Node.js</span><span>MongoDB</span>
+      </div>
+      <div class="project__links">
+        <a href="#" target="_blank" rel="noopener">LIVE</a>
+        <a href="#" target="_blank" rel="noopener">GITHUB</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="projects-nav">
+    <button class="carousel-btn" id="prevProject" aria-label="Previous project">←</button>
+    <div class="carousel-dots" id="projectDots"></div>
+    <button class="carousel-btn" id="nextProject" aria-label="Next project">→</button>
+  </div>
+</div>
+    </section>
+
+  </main>
+
+  <!-- ============ CONTACT / FOOTER ============ -->
+  <footer id="contact" class="footer section reveal">
+    <p class="eyebrow">06 · CONTACT</p>
+    <h2 class="footer__cta">Let's talk</h2>
+    <p class="footer__blurb">Open to new projects, ideas, or opportunities. Reach out any time.</p>
+    <a class="btn btn--solid" href="mailto:laura.best@ucalgary.ca">Say Hello</a>
+ 
+    <div class="footer__bottom">
+      <div class="footer__socials">
+        <a href="https://github.com/laurabest2005-commits" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/laura-best-625566378/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:laura.best@ucalgary.ca" target="_blank" rel="noopener">Email</a>
+      </div>
+      <p class="footer__copy">© <span id="year"></span> Laura Best. All rights reserved.</p>
+    </div>
+ 
+    <div class="footer__giant" aria-hidden="true">Laura Best</div>
+  </footer>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
+ 
+ 
