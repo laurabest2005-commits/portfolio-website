@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Laura Best — Portfolio</title>
-<meta name="description" content="Portfolio of Your Name — developer and builder." />
+<meta name="description" content="Portfolio of Laura Best — electrical engineering student at the University of Calgary, working in mechatronics, PCB design, and embedded systems." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
@@ -28,24 +28,27 @@
 
   <main>
 
-    <!-- ============ HERO ============ -->
+    <!--  HERO  -->
     <section id="hero" class="hero">
       <p class="eyebrow">01 · HELLO</p>
       <h1 class="hero__title">Laura Best</h1>
       <p class="hero__tagline">I build things, break things, and occasionally fix things that weren't broken in the first place.</p>
       <div class="hero__cta">
         <a href="mailto:laura.best@ucalgary.ca" class="btn btn--solid">Contact Me</a>
-        <a href="C:\Users\laura\Downloads\Resume - Laura Best.pdf" class="btn btn--ghost">View Resume</a>
+        <!-- CHANGED: was a C:\Users\laura\... path, which only resolves on your
+             own machine (and modern browsers block file:// links from a web
+             page outright). Copy the PDF next to index.html as resume.pdf. -->
+        <a href="resume.pdf" class="btn btn--ghost" target="_blank" rel="noopener">View Resume</a>
       </div>
     </section>
 
-    <!-- ============ ABOUT ============ -->
+    <!--  ABOUT  -->
     <section id="about" class="section reveal">
       <p class="eyebrow">02 · ABOUT</p>
       <h2 class="section__title">About</h2>
       <div class="about__grid">
         <p class="about__bio">
-        Motivated electrical engineering student at the University of Calgary, specializing in mechatronics, PCB design, 
+        Motivated electrical engineering student at the University of Calgary, specializing in mechatronics, PCB design,
         and embedded systems, seeking opportunities in tech where I can contribute to hardware/software
         development and real world engineering solutions. Authorized to work in both Canada and the United States.
         </p>
@@ -59,14 +62,14 @@
             <span class="stat__label">Student Organizations</span>
           </div>
           <div class="stat">
-            <span class="stat__num">500+</span>
+            <span class="stat__num">1500+</span>
             <span class="stat__label">Hours of Real-World Customer Interaction</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ SKILLS (marquee) ============ -->
+    <!-- SKILLS (marquee) -->
     <section id="skills" class="section reveal">
       <p class="eyebrow">03 · SKILLS</p>
       <h2 class="section__title">Skills</h2>
@@ -74,24 +77,32 @@
       <div class="marquee">
         <div class="marquee__track">
           <span>JavaScript</span><span>TypeScript</span><span>HTML5</span><span>CSS3</span><span>Python</span><span>SQL</span>
+        </div>
+        <div class="marquee__track" aria-hidden="true">
           <span>JavaScript</span><span>TypeScript</span><span>HTML5</span><span>CSS3</span><span>Python</span><span>SQL</span>
         </div>
       </div>
+
       <div class="marquee marquee--reverse">
         <div class="marquee__track">
-          <span>React</span><span>C/C++</span><span>CAD</span><span>MATLAB</span><span>PCB Design</span><span>Fusion 360</span>
-          <span>React</span><span>C/C++</span><span>CAD</span><span>MATLAB</span><span>PCB Design</span><span>Fusion 360</span>
+          <span>Excel</span><span>C/C++</span><span>CAD</span><span>MATLAB</span><span>PCB Design</span><span>Fusion 360</span>
+        </div>
+        <div class="marquee__track" aria-hidden="true">
+          <span>Excel</span><span>C/C++</span><span>CAD</span><span>MATLAB</span><span>PCB Design</span><span>Fusion 360</span>
         </div>
       </div>
+
       <div class="marquee">
         <div class="marquee__track">
           <span>Git</span><span>Altium</span><span>AWS</span><span>Figma</span><span>Linux</span><span>SOLIDWORKS</span>
+        </div>
+        <div class="marquee__track" aria-hidden="true">
           <span>Git</span><span>Altium</span><span>AWS</span><span>Figma</span><span>Linux</span><span>SOLIDWORKS</span>
         </div>
       </div>
     </section>
 
-    <!-- ============ EXPERIENCE ============ -->
+    <!-- EXPERIENCE -->
     <section id="experience" class="section reveal">
       <p class="eyebrow">04 · EXPERIENCE</p>
       <h2 class="section__title">Experience</h2>
@@ -99,10 +110,12 @@
       <div class="timeline">
         <article class="timeline__item">
           <div class="timeline__head">
+            <!-- NOTE: href="#" jumps to the top of the page. Either point these
+                 at the real team/society sites or drop the <a> wrapper. -->
             <h3><a href="#" target="_blank" rel="noopener">Zeus Electric Motorsport Team</a></h3>
             <span class="timeline__date">Sep 2025 — Present</span>
           </div>
-          <p class="timeline__role">Telemetry & Cooling Sub Team</p>
+          <p class="timeline__role">Telemetry &amp; Cooling Sub Team</p>
           <ul class="timeline__points">
             <li>Develop and maintain technical documentation for multiple PCBs, including schematics, revision tracking, and manufacturing handoff packages.</li>
             <li>Design and review telemetry and cooling system PCB components using Altium Designer to support reliable data acquisition and system monitoring.</li>
@@ -116,7 +129,7 @@
 
         <article class="timeline__item">
           <div class="timeline__head">
-            <h3><a href="#" target="_blank" rel="noopener">ZOO (Society of Electrical & Software Engineers)</a></h3>
+            <h3><a href="#" target="_blank" rel="noopener">ZOO (Society of Electrical &amp; Software Engineers)</a></h3>
             <span class="timeline__date">Aug 2026 — Present</span>
           </div>
           <p class="timeline__role">Marketing Commissioner</p>
@@ -131,80 +144,77 @@
       </div>
     </section>
 
-    <!-- ============ WORK / PROJECTS ============ -->
+    <!-- WORK / PROJECTS -->
     <section id="work" class="section reveal">
-      <p class="eyebrow">05 · Projects</p>
+      <p class="eyebrow">05 · PROJECTS</p>
       <h2 class="section__title">Projects</h2>
 
       <div class="projects-carousel">
-  <div class="projects-track" id="projectsTrack">
-    <article class="project">
-      <span class="project__num">001</span>
-      <h3 class="project__title">Fitness Tracking Watch</h3>
-      <p class="project__desc">Designed and built a custom fitness watch from the ground up to explore embedded systems development beyond coursework, using an ESP32-S3 microcontroller and C++.</p>
-      <div class="tags">
-        <span>ESP32-S3</span><span>C++</span><span>Embedded Systems</span>
-      </div>
-      <div class="project__links">
-        <a href="#" target="_blank" rel="noopener">GITHUB</a>
-      </div>
-    </article>
+        <div class="projects-track" id="projectsTrack">
+          <article class="project">
+            <span class="project__num">001</span>
+            <h3 class="project__title">Fitness Tracking Watch</h3>
+            <p class="project__desc">Designed and built a custom fitness watch from the ground up to explore embedded systems development beyond coursework, using an ESP32-S3 microcontroller and C++.</p>
+            <div class="tags">
+              <span>ESP32-S3</span><span>C++</span><span>Embedded Systems</span>
+            </div>
+            <div class="project__links">
+            </div>
+          </article>
 
-    <article class="project">
-      <span class="project__num">002</span>
-      <h3 class="project__title">Multi-file Data Analytics Interface</h3>
-      <p class="project__desc">Solved the inefficiency of manually cross-referencing multiple large CSV datasets by engineering a Python and NumPy application for high-performance automated analysis.</p>
-      <div class="tags">
-        <span>Python</span><span>NumPy</span><span>Matplotlib</span>
-      </div>
-      <div class="project__links">
-        <a href="https://github.com/laurabest2005-commits/Multi-File-Data-Analytics-Interface" target="_blank" rel="noopener">GITHUB</a>
-      </div>
-    </article>
+          <article class="project">
+            <span class="project__num">002</span>
+            <h3 class="project__title">Multi-file Data Analytics Interface</h3>
+            <p class="project__desc">Solved the inefficiency of manually cross-referencing multiple large CSV datasets by engineering a Python and NumPy application for high-performance automated analysis.</p>
+            <div class="tags">
+              <span>Python</span><span>NumPy</span><span>Matplotlib</span>
+            </div>
+            <div class="project__links">
+              <a href="https://github.com/laurabest2005-commits/Multi-File-Data-Analytics-Interface" target="_blank" rel="noopener">GITHUB</a>
+            </div>
+          </article>
 
-    <article class="project">
-      <span class="project__num">003</span>
-      <h3 class="project__title">Remote Controlled Boat</h3>
-      <p class="project__desc">Led a 4-person team from concept through build, taking ownership of the electronics while coordinating design tasks, timelines, and integration across the group.</p>
-      <div class="tags">
-        <span>Raspberry Pi Pico</span><span>MicroPython</span><span>Team Leadership</span>
-      </div>
-      <div class="project__links">
-      </div>
-    </article>
-  </div>
+          <article class="project">
+            <span class="project__num">003</span>
+            <h3 class="project__title">Remote Controlled Boat</h3>
+            <p class="project__desc">Led a 4-person team from concept through build, taking ownership of the electronics while coordinating design tasks, timelines, and integration across the group.</p>
+            <div class="tags">
+              <span>Raspberry Pi Pico</span><span>MicroPython</span><span>Team Leadership</span>
+            </div>
+            <div class="project__links">
+            </div>
+          </article>
+        </div>
 
-  <div class="projects-nav">
-    <button class="carousel-btn" id="prevProject" aria-label="Previous project">←</button>
-    <div class="carousel-dots" id="projectDots"></div>
-    <button class="carousel-btn" id="nextProject" aria-label="Next project">→</button>
-  </div>
-</div>
+        <div class="projects-nav">
+          <button class="carousel-btn" id="prevProject" aria-label="Previous project">←</button>
+          <div class="carousel-dots" id="projectDots"></div>
+          <button class="carousel-btn" id="nextProject" aria-label="Next project">→</button>
+        </div>
+      </div>
     </section>
 
   </main>
 
-  <!-- ============ CONTACT / FOOTER ============ -->
+  <!-- CONTACT / FOOTER -->
   <footer id="contact" class="footer section reveal">
     <p class="eyebrow">06 · CONTACT</p>
     <h2 class="footer__cta">Let's talk</h2>
     <p class="footer__blurb">Open to new projects, ideas, or opportunities. Reach out any time.</p>
     <a class="btn btn--solid" href="mailto:laura.best@ucalgary.ca">Say Hello</a>
- 
+
     <div class="footer__bottom">
       <div class="footer__socials">
         <a href="https://github.com/laurabest2005-commits" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/laura-best-625566378/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:laura.best@ucalgary.ca" target="_blank" rel="noopener">Email</a>
+        <a href="mailto:laura.best@ucalgary.ca">Email</a>
       </div>
       <p class="footer__copy">© <span id="year"></span> Laura Best. All rights reserved.</p>
     </div>
- 
+
     <div class="footer__giant" aria-hidden="true">Laura Best</div>
   </footer>
- 
+
   <script src="script.js"></script>
 </body>
 </html>
- 
- 

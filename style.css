@@ -1,14 +1,10 @@
-/* ==========================================================
-   THEME
-   All colors/sizes live here so the whole site can be
-   restyled by changing a handful of values.
-========================================================== */
+/* THEME */
 :root {
   --bg: #0a0a0a;
   --bg-soft: #111111;
   --text: #ededed;
   --text-dim: #8a8a8a;
-  --accent: #4fffdf;      /* swap this for your own accent color */
+  --accent: #4fffdf;      
   --border: #262626;
   --font-body: 'Space Grotesk', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
@@ -50,11 +46,7 @@ ul { list-style: none; }
   padding: 6rem 1.5rem;
 }
 
-/* ==========================================================
-   SCROLL-REVEAL
-   Sections start slightly faded/lowered, then animate in
-   when they enter the viewport. See script.js.
-========================================================== */
+/* SCROLL-REVEAL */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -65,9 +57,7 @@ ul { list-style: none; }
   transform: translateY(0);
 }
 
-/* ==========================================================
-   NAV
-========================================================== */
+/* NAV */
 .nav {
   position: sticky;
   top: 0;
@@ -110,9 +100,7 @@ ul { list-style: none; }
   background: var(--text);
 }
 
-/* ==========================================================
-   HERO
-========================================================== */
+/* HERO */
 .hero {
   min-height: 90vh;
   display: flex;
@@ -159,9 +147,7 @@ ul { list-style: none; }
 .btn--solid:hover { opacity: 0.85; }
 .btn--ghost:hover { border-color: var(--accent); color: var(--accent); }
 
-/* ==========================================================
-   ABOUT
-========================================================== */
+/* ABOUT */
 .about__grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -181,51 +167,67 @@ ul { list-style: none; }
 .stat__num { font-size: 2rem; font-weight: 700; color: var(--accent); }
 .stat__label { font-size: 0.8rem; color: var(--text-dim); font-family: var(--font-mono); }
 
-/* ==========================================================
-   SKILLS MARQUEE
-   Two identical <span> sets sit side by side inside a track
-   twice the visible width; animating translateX(-50%) makes
-   it loop seamlessly forever.
-========================================================== */
+/* SKILLS MARQUEE */
 .marquee {
+  --gap: 3rem;   /* spacing between skills; the only value to tune */
+
+  display: flex;
+  gap: 0;        
   overflow: hidden;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 1rem 0;
-  margin-bottom: -1px; /* collapse shared borders between rows */
+  margin-bottom: -1px; 
 }
 
 .marquee__track {
   display: flex;
-  width: max-content;
-  gap: 3rem;
-  animation: scrollLeft 25s linear infinite;
+  align-items: center;
+  gap: var(--gap);
+  padding-right: var(--gap); 
+  flex-shrink: 0;
+  min-width: 100%;
+  justify-content: space-around;
+
+  animation: marqueeScroll 25s linear infinite;
+  will-change: transform;
 }
 
 .marquee--reverse .marquee__track {
-  animation-name: scrollRight;
+  animation-direction: reverse;
   animation-duration: 30s;
 }
 
+
+.marquee:hover .marquee__track { animation-play-state: paused; }
+
 .marquee__track span {
+  flex-shrink: 0;
   font-family: var(--font-mono);
   font-size: 1.1rem;
   color: var(--text-dim);
   white-space: nowrap;
 }
 
-@keyframes scrollLeft {
+@keyframes marqueeScroll {
   from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-@keyframes scrollRight {
-  from { transform: translateX(-50%); }
-  to   { transform: translateX(0); }
+  to   { transform: translateX(-100%); }
 }
 
-/* ==========================================================
-   EXPERIENCE TIMELINE
-========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee { flex-wrap: wrap; justify-content: center; }
+  .marquee__track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 0;
+    padding-right: 0;
+  }
+  .marquee__track[aria-hidden="true"] { display: none; }
+}
+
+/* EXPERIENCE TIMELINE */
 .timeline__item {
   border-top: 1px solid var(--border);
   padding: 2rem 0;
@@ -266,12 +268,7 @@ ul { list-style: none; }
   color: var(--text-dim);
 }
 
-/* ==========================================================
-   PROJECTS — horizontal, one-by-one carousel
-   .projects-track scrolls sideways; scroll-snap-align on each
-   .project makes it "click" into place one card at a time
-   (by mouse drag, trackpad swipe, or the arrow buttons).
-========================================================== */
+/* PROJECTS  */
 .projects-carousel {
   display: flex;
   flex-direction: column;
@@ -285,7 +282,6 @@ ul { list-style: none; }
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   padding-bottom: 0.5rem;
-  /* hide the scrollbar across browsers; dots/arrows drive navigation instead */
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -351,9 +347,7 @@ ul { list-style: none; }
 .project__links a { color: var(--accent); }
 .project__links a:hover { text-decoration: underline; }
 
-/* ==========================================================
-   FOOTER / CONTACT
-========================================================== */
+/* FOOTER / CONTACT */
 .footer {
   text-align: center;
   border-top: 1px solid var(--border);
@@ -377,7 +371,6 @@ ul { list-style: none; }
 .footer__socials a:hover { color: var(--accent); }
 .footer__copy { color: var(--text-dim); font-size: 0.8rem; font-family: var(--font-mono); }
 
-/* Giant outlined name — pure CSS, no image */
 .footer__giant {
   margin-top: 3rem;
   font-size: clamp(3rem, 14vw, 10rem);
@@ -388,9 +381,7 @@ ul { list-style: none; }
   user-select: none;
 }
 
-/* ==========================================================
-   RESPONSIVE
-========================================================== */
+/* RESPONSIVE */
 @media (max-width: 720px) {
   .nav__links {
     display: none;
@@ -408,4 +399,7 @@ ul { list-style: none; }
   .nav__toggle { display: flex; }
   .about__grid { grid-template-columns: 1fr; }
   .footer__bottom { flex-direction: column; text-align: center; }
+
+  .marquee { --gap: 1.75rem; }
+  .marquee__track span { font-size: 1rem; }
 }

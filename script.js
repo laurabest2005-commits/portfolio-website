@@ -1,6 +1,5 @@
-// ==========================================================
 // 1. Mobile nav toggle
-// ==========================================================
+
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.querySelector('.nav__links');
 
@@ -13,13 +12,8 @@ document.querySelectorAll('.nav__links a').forEach((link) => {
   link.addEventListener('click', () => navLinks.classList.remove('is-open'));
 });
 
-// ==========================================================
 // 2. Scroll-reveal animation
-// Every element with the "reveal" class starts hidden
-// (see .reveal in style.css). IntersectionObserver watches
-// the page and adds "is-visible" the moment each section
-// scrolls into view, which triggers the CSS transition.
-// ==========================================================
+
 const revealEls = document.querySelectorAll('.reveal');
 
 const observer = new IntersectionObserver(
@@ -36,9 +30,8 @@ const observer = new IntersectionObserver(
 
 revealEls.forEach((el) => observer.observe(el));
 
-// ==========================================================
 // 3. Auto-update the copyright year
-// ==========================================================
+
 document.getElementById('year').textContent = new Date().getFullYear();
 const track = document.getElementById('projectsTrack');
 const prevBtn = document.getElementById('prevProject');
